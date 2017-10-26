@@ -43,7 +43,10 @@ public class SelectionSort_Iterative {
 		} 
 		System.out.println();
 		SelectionSort_Iterative ss = new SelectionSort_Iterative();
+		long startTime = System.nanoTime();
 		ss.SelectionSort(arraySort, array);
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
 		System.out.println("Sorted Array ");
 		for(int i = 0; i < arraySort.length; i ++)
 		{
@@ -52,6 +55,7 @@ public class SelectionSort_Iterative {
 		System.out.println();
 		System.out.println("Num Moved: " + array[1]);
 		System.out.println("Num Compared: " + array[0]);
+		System.out.println(duration);
 		
 	}
 }
