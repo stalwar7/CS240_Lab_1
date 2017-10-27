@@ -5,8 +5,8 @@ public class ShellSort_Iterative {
 	//i = k; i >0; i--
 	//increment 2^k -1
 	//for loop
-	//insertion sort - basically
-	public static void ShellSort(int[] arraySort)
+	//then insertion sort - basically
+	public static void ShellSort(int[] arraySort, int[] array)
 	{
 		int size = arraySort.length;
 		
@@ -19,14 +19,18 @@ public class ShellSort_Iterative {
 				for (k=j; gap >= gap && arraySort[j-gap] > temp; k -= gap)
 				{
 					arraySort[k] = arraySort[k-gap];
+					array[0] =+ 1; //countCompare
 				}
 				arraySort[k] = temp;
+				array[1] += 3; //countMove
+				
 			}
 		}
 	}
 	public static void main(String[] args) 
     {
-		int arraySort[] = new int[10];		
+		int arraySort[] = new int[10];	
+		int array[] = new int[2];
 		Random randomObj = new Random();
 		System.out.println("Unsorted Array: ");
 		for (int i = 0; i< arraySort.length; i++)
@@ -36,12 +40,14 @@ public class ShellSort_Iterative {
 		   	System.out.print(arraySort[i] + " ");
 		} 
 		System.out.println();        
-        ShellSort(arraySort);        
+        ShellSort(arraySort, array);        
         System.out.println("Sorted Array: ");        
         for (int i = 0; i < arraySort.length; i++)
         {
             System.out.print(arraySort[i] + " ");   
         }
+        System.out.println("Num Moved: " + array[1]);
+		System.out.println("Num Compared: " + array[0]);
     }
                      
 }
