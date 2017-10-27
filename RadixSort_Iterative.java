@@ -32,7 +32,7 @@ public class RadixSort_Iterative
     }
 	public static void main(String[] args) 
     {
-		int arraySort[] = new int[10];		
+		int arraySort[] = new int[100];		
 		Random randomObj = new Random();
 		System.out.println("Unsorted Array: ");
 		for (int i = 0; i< arraySort.length; i++)
@@ -41,13 +41,17 @@ public class RadixSort_Iterative
 		   	arraySort[i] = x;
 		   	System.out.print(arraySort[i] + " ");
 		} 
-		System.out.println();        
-        RadixSort(arraySort);        
+		System.out.println();  
+		long startTime = System.nanoTime();
+        RadixSort(arraySort);  
+        long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
         System.out.println("Sorted Array: ");        
         for (int i = 0; i < arraySort.length; i++)
         {
             System.out.print(arraySort[i] + " ");   
         }
-                     
+        System.out.println();
+        System.out.println(duration);             
     }  
 }

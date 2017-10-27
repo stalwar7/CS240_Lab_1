@@ -23,7 +23,7 @@ public class InsertionSort_Iterative {
     }
 	public static void main (String args[])
 	{
-		int arraySort[] = new int[10];
+		int arraySort[] = new int[1000];
 		int array[] = new int[2];
 		Random randomObj = new Random();	
 		for (int i = 0; i< arraySort.length; i++)
@@ -34,7 +34,10 @@ public class InsertionSort_Iterative {
 		} 
 		System.out.println();
 		InsertionSort_Iterative ss = new InsertionSort_Iterative();
+		long startTime = System.nanoTime();
 		ss.InsertionSort(arraySort, array);
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
 		System.out.println("Sorted Array ");
 		for(int i = 0; i < arraySort.length; i ++)
 		{
@@ -43,6 +46,7 @@ public class InsertionSort_Iterative {
 		System.out.println();
 		System.out.println("Num Moved: " + array[1]);
 		System.out.println("Num Compared: " + array[0]);
+		System.out.println(duration);
 		
 	}
 	

@@ -32,7 +32,7 @@ public class SelectionSort_Iterative {
 	}
 	public static void main (String args[])
 	{
-		int arraySort[] = new int[10];
+		int arraySort[] = new int[1000];
 		int array[] = new int[2];
 		Random randomObj = new Random();	
 		for (int i = 0; i< arraySort.length; i++)

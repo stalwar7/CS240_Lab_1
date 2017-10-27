@@ -1,16 +1,16 @@
 import java.util.Random;
 
 public class MergeSort_Recursive {
-    private int[] numbers;
-    private int[] helper;
+    private int[] temp;
+    private int[] temp2;
 
-    private int number;
+    private int index;
 
     public void sort(int[] values) {
-        this.numbers = values;
-        number = values.length;
-        this.helper = new int[number];
-        Mergesort(0, number - 1);
+        this.temp = values;
+        index = values.length;
+        this.temp2 = new int[index];
+        Mergesort(0, index - 1);
     }
 
     private void Mergesort(int low, int high) {
@@ -25,24 +25,24 @@ public class MergeSort_Recursive {
     private void merge(int low, int middle, int high) 
     {
         for (int i = low; i <= high; i++) {
-            helper[i] = numbers[i];
+            temp2[i] = temp[i];
      }
 
         int i = low;
         int j = middle + 1;
         int k = low;
         while (i <= middle && j <= high) {
-            if (helper[i] <= helper[j]) {
-                numbers[k] = helper[i];
+            if (temp2[i] <= temp2[j]) {
+                temp[k] = temp2[i];
                 i++;
             } else {
-                numbers[k] = helper[j];
+                temp[k] = temp2[j];
                 j++;
             }
             k++;
         }
         while (i <= middle) {
-            numbers[k] = helper[i];
+            temp[k] = temp2[i];
             k++;
             i++;
         }
