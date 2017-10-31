@@ -22,18 +22,18 @@ public class RadixSort_Iterative
         //sort values in buckets 
         while (top / exponent > 0)
         {
-            int[] bucket = new int[10];
+            int[] bucket = new int[arraySort.length];
  
             for (int i = 0; i < size; i++)
-                bucket[(arraySort[i] / exponent) % 10]++;
-            for (int i = 1; i < 10; i++)
+                bucket[(arraySort[i] / exponent) % arraySort.length]++;
+            for (int i = 1; i < arraySort.length; i++)
             {
                 bucket[i] += bucket[i - 1];
                 array[0] += 1;  //countMove
             }
             for (int i = size - 1; i >= 0; i--)
             {
-                b[--bucket[(arraySort[i] / exponent) % 10]] = arraySort[i];
+                b[--bucket[(arraySort[i] / exponent) % arraySort.length]] = arraySort[i];
                 array[0] += 1;  //countMove
             }
             for (int i = 0; i < size; i++)
@@ -43,7 +43,7 @@ public class RadixSort_Iterative
     }
 	public static void main(String[] args) 
     {
-		int arraySort[] = new int[100];		
+		int arraySort[] = new int[10];		
 		int array[] = new int[2];
 		Random randomObj = new Random();
 		System.out.println("Unsorted Array: ");
