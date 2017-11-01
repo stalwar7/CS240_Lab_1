@@ -1,3 +1,8 @@
+/**
+   An iterative version of the Selection Sort Algorithm
+   @author Sana Talwar
+   @version 1.0
+*/
 import java.util.Random;
 
 public class SelectionSort_Iterative {

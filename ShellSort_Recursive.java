@@ -1,5 +1,9 @@
+/**
+   An recursive version of the Shell Sort Algorithm
+   @author Sana Talwar
+   @version 1.0
+*/
 import java.util.Random;
-
 public class ShellSort_Recursive {
 	public int[] sort(int[] arraySort, int index) {
 		

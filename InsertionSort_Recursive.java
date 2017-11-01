@@ -1,3 +1,8 @@
+/**
+   An recursive version of the Insertion Sort Algorithm
+   @author Sana Talwar
+   @version 1.0
+*/
 import java.util.Random;
 
 public class InsertionSort_Recursive {

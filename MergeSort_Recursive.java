@@ -1,3 +1,8 @@
+/**
+   An recursive version of the Merge Sort Algorithm
+   @author Sana Talwar
+   @version 1.0
+*/
 import java.util.Random;
 
 public class MergeSort_Recursive {

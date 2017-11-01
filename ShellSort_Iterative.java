@@ -1,5 +1,9 @@
+/**
+   An iterative version of the Shell Sort Algorithm
+   @author Sana Talwar
+   @version 1.0
+*/
 import java.util.Random;
-
 public class ShellSort_Iterative {
 	// find k so (2^k - 1) < size
 	// i = k; i >0; i--
